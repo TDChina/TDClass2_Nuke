@@ -146,7 +146,6 @@ nuke和nukescripts模块可以在标准python环境下被导入并使用，但�
 并且命令行模式下不应包含任何GUI相关的代码
 
 使用命令行运行Nuke Python解释器：
-* 
 ```shell
 >nuke主程序路径 -t python脚本路径 参数
 ```
@@ -162,15 +161,36 @@ Hello Nuke!
 * https://learn.foundry.com/nuke/11.2/content/comp_environment/configuring_nuke/command_line_operations.html
 
 
-## 第七部分：
+## 第七部分：Callback
 * https://learn.foundry.com/nuke/developers/11.2/pythondevguide/callbacks.html
 ### Callback的概念
-类比信号-槽
-#### 跟普通函数调用的区别：
-* 普通函数调用是同步调用，调用方需要等待被调用方完成再做下面的事情；回调方式可以是异步调用，调用方不必等待被调用方，在被调用方完成后自动执行回调函数
+将某一函数A的指针（在Python中即为函数对象本身）作为参数传递给另一个函数B，以便在B函数中通过该参数调用A函数，则称A函数为回调函数。
 
+### 回调函数的优点
+* 解耦：由于回调函数是以参数的形式传入，所以可以按需配置，而无需像普通调用一样写死在函数B中
+* 异步：回调多用于异步编程，即将函数A注册为函数B的回调后就可以去做别的事情了，等到函数B执行到特定时刻自然会去调用函数A
 
+### 与信号-槽对比
 
+### 常用的Callback
+* OnCreate
+* OnUserCreate
+* OnScriptLoad
+* OnScriptSave
+* OnScriptClose
+* beforeRender
+* afterRender
+* knobChanged
 
+## 第八部分：Gizmo制作
 
-# 第八部分：Gizmo实例
+### 如何创建多个输入
+### 如何pick knob
+### 如何为主界面添加自定义knob
+### 如何在gizmo内部获取主界面knob的值
+### 如何编写knobChanged Callbac
+### 如何动态配置Gizmo中的参数
+
+## 作业：
+1. 制作一个slate gizmo，其中需要用到tcl
+2. 编写一个Python脚本，并用nuke命令行模式执行。脚本需要传入一个序列帧路径作为参数，并调用第一步生成的slate gizmo来渲染出带水印的mov小样。
