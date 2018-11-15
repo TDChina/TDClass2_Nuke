@@ -201,5 +201,5 @@ Hello Nuke!
 ## 作业：
 1. 制作一个slate gizmo
 2. 编写一个Python脚本读取一个配置文件（配置文件中至少包含一个序列帧路径及起始、结束帧号）
-3. 以第一步的gizmo为基础制作一个nuke工程，在工程的Root中设置OnSriptLoad，调用第二步的脚本，为Read节点、Root节点设置参数
+3. 以第一步的gizmo为基础制作一个nuke工程，在工程的Root中设置OnScriptLoad，调用第二步的脚本，为Read节点、Root节点设置参数
 4. 以Nuke命令行形式执行第三步的nuke工程，渲染出mov文件
