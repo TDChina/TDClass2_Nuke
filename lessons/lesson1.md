@@ -142,7 +142,7 @@ Nuke和Maya一样有自带的重新编译过的python解释器，以及各种标
 
 ### nuke的命令行模式及nuke模块
 nuke和nukescripts模块可以在标准python环境下被导入并使用，但是需要注意跟Nuke GUI相关的函数无法使用，
-且由于编译版本不匹配的原因可能会存在未知的冲突，因此官方建议使用Nuke自带的python解释器来执行年nuke python脚本，
+且由于编译版本不匹配的原因可能会存在未知的冲突，因此官方建议使用Nuke自带的python解释器来执行nuke python脚本，
 并且命令行模式下不应包含任何GUI相关的代码
 
 使用命令行运行Nuke Python解释器：
