@@ -50,7 +50,7 @@
 * Blink Kernel
 * NDK
 
-## 第二部分：如何用python操作Nuke节点树（15分钟）
+## 第二部分：如何用python操作Nuke节点树
 
 ### Script Editor
 * 按钮功能
