@@ -46,6 +46,3 @@ class ElementLoaderModel(object):
         task_folder = '{}/{}/{}/{}'.format(project_folder_pattern.format(project=self.info['project']), sequence, shot, task)
         versions = [folder for folder in os.listdir(task_folder) if os.path.isdir('{}/{}'.format(task_folder, folder))]
         return sorted(versions).reverse()
-
-    def search_resolution
-

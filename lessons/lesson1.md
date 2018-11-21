@@ -119,7 +119,7 @@ nuke.execute('Write_node_name', first, last, step)
 * Python Script Button
 * Python Custom
 
-## 第四部分：tcl学习及实例
+## 第四部分：tcl学习及实例 *（重点）*
 ### 字符串操作
 如何用tcl语句从文件路径中裁切出所需的内容
 * value
@@ -156,13 +156,9 @@ Hello Nuke!
 
 ## 第六部分：Gizmo制作
 
-### 如何创建多个输入
-### 如何pick knob
-### 如何为主界面添加自定义knob
-### 如何在gizmo内部获取主界面knob的值
-### 如何将表达式融入Gizmo当中
-
-## 作业：
-1. 制作一个slate gizmo并搭建一个序列帧转mov的工程
-2. 编写一个Python脚本，从命令行读取一个序列帧，并设置nuke工程中相应的knob值
-3. 以Nuke命令行形式执行第二步的脚本，渲染出mov文件
+### Add Knob
+### Pick knob
+### 在gizmo内部获取主界面knob的值
+```tcl
+parent.knob_name
+```
