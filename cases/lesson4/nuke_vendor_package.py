@@ -489,7 +489,7 @@ class PackagingUI(QtGui.QWidget):
         copy process.
 
         """
-        index = thread.index + 1
+        index = thread.index
         self.packaging_wrapper = thread.packaging_wrapper
         self.total_copy_amount = self.packaging_wrapper.copy_files_count
         self.thread_finish(thread)
