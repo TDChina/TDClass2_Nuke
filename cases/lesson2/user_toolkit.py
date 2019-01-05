@@ -9,6 +9,7 @@ TOOLKIT_ROOT = '/Volumes/Seagate/tdclass/TDClass2_Nuke/cases/lesson2/toolkit'
 
 user_name = getpass.getuser()
 
+
 def remove_template(template_name):
     root_menu = nuke.menu('Nuke')
     template_menu = root_menu.findItem('Toolkit/{}/{}'.format(user_name, template_name))
@@ -74,6 +75,9 @@ class AddScriptPanel(QtWidgets.QDialog):
             self.tool_name_edit.clear()
             self.accept()
 
+
 ui = AddScriptPanel()
+
+
 def run():
     ui.exec_()

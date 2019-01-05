@@ -9,6 +9,7 @@ working_file_pattern = ('/Volumes/Seagate/vfxstorage/project/'
                         '(?P<shot>[0-9]{4})/(?P<task_type>[a-z]+)/(?P<full_task>[a-z0-9-]+)/'
                         '(?P=project)_(?P=sequence)_(?P=shot)_(?P=full_task)_v(?P<version_number>[0-9]{3}).nk')
 
+
 class WritePathPanel(nukescripts.PythonPanel):
     def __init__(self,n):
         nukescripts.PythonPanel.__init__(self,'Auto Write Path')

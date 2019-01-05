@@ -1,4 +1,3 @@
-import PySide2.QtCore as QtCore
 import PySide2.QtWidgets as QtGui
 from threading import Thread
 import subprocess
@@ -24,24 +23,25 @@ class platewidget(QtGui.QWidget):
         self.layout().addWidget(self.bbutton)
         self.layout().addWidget(self.resultLabel)
         self.layout().addWidget(self.buttonLabel)
-    
+
     def runcommand(self):
-        cmd = ['python','/Volumes/Seagate/tdclass/TDClass2_Nuke/cases/lesson5/subp.py']
-        s = subprocess.Popen(cmd,stdout = subprocess.PIPE)
-        t = Thread(target = self.th,args = (s,))
+        cmd = ['python', '/Volumes/Seagate/tdclass/TDClass2_Nuke/cases/lesson5/subp.py']
+        s = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+        t = Thread(target=self.th, args=(s,))
         self.resultLabel.setText('Copy Start!')
         t.start()
 
-    def th(self,s):
-        for line in iter(s.stdout.readline,''):
-           if "Finished!" in line:
-               self.resultLabel.setText("Copy Finished!")
+    def th(self, s):
+        for line in iter(s.stdout.readline, ''):
+            if "Finished!" in line:
+                self.resultLabel.setText("Copy Finished!")
 
     def ab(self):
         self.buttonLabel.setText("aaa")
 
     def bb(self):
         self.buttonLabel.setText("bbb")
+
 
 w = platewidget()
 w.show()
